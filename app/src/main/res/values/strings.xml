@@ -3,4 +3,7 @@
     <string name="submit">startsearch</string>
     <string name="Keyword">TextView</string>
     <string name="bitte_keyword_eingeben">Bitte Keyword eingeben!</string>
+    <string name="fortfahren">Fortfahren?</string>
+    <string name="fortfahrenbutton">Auf der Folgenden Website wurden Spoiler erkannt! Möchten Sie fortfahren ?</string>
+    <string name="bitte_geben_sie_ein_keyword_ein_zum_blocken">Bitte geben Sie ein Keyword ein zum Blocken!</string>
 </resources>

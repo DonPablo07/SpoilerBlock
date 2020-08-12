@@ -1,14 +1,15 @@
 package de.spoilerblock;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,19 +23,24 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-            //webSearch();
-               //TODO Beim Klicken des Buttons soll eine Websuche gestartet werden.
+            webSearch();
             }
-            /*
-            public void webSearch() {
-                EditText keyword = findViewById (R.id.searchkeyword); //Wandelt das eingegebene Keyword in einen String um
-                String q = keyword.getText().toString();
 
-                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-                intent.putExtra(SearchManager.QUERY, q);
-                startActivity(intent);
+            @SuppressLint("SetTextI18n")
+            public void webSearch() {
+                EditText keyword = findViewById(R.id.searchkeyword);
+                String q = keyword.getText().toString(); //Wandelt das eingegebene Keyword in einen String um
+                TextView textView = findViewById(R.id.textWarning);
+
+                if (q.equals("")) {
+                    textView.setVisibility(View.VISIBLE);
+                }
+                else {
+                    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                    intent.putExtra(SearchManager.QUERY, q);
+                    startActivity(intent);
+                }
             }
-            */
         });
     }
 }
