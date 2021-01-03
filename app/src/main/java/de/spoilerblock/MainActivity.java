@@ -30,11 +30,10 @@ public class MainActivity extends AppCompatActivity {
             // Do a Google request for the Text in the "searchkeyword" Box
             @SuppressLint("SetTextI18n")
             public void webSearch() {
+
                 EditText keyword = findViewById(R.id.searchkeyword);
                 String q = keyword.getText().toString(); //Wandelt das eingegebene Keyword in einen String um
                 TextView leereZeile = findViewById(R.id.textWarning); //Die TextView "leereZeile" hat die ID = "textWarning"
-                GetJsonData JsonData = new GetJsonData();
-
 
                 if (q.equals("")) {                                    //Wenn der Text/String im Feld "keyword" leer ist, soll die TextView "leereZeile" angezeigt werden!
                     leereZeile.setVisibility(View.VISIBLE);
